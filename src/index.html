@@ -1,0 +1,82 @@
+<html ng-app="soundMixes">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="">
+    <div class="header">
+        <img class="" alt="Logo" src="/assets/Logo_grey.png" style="width: 130px; height: 130px;"/>
+        <img class="hidden-sm hidden-xs img-responsive" alt="Header" src="/assets/Header_transparent.png"
+             style="width: auto; height: 130px;"/>
+    </div>
+
+    <div class="info">
+        <p>&gt;web radio, broadcasting wednesdays between 7 p.m. and 10 p.m.
+            GMT+1&lt;</p>
+    </div>
+    <div class="row menu-row">
+        <div class="menu col-sm-2">
+            <div class="link" >
+                <a href="https://mixlr.com/malmoantenn/" target="_blank">&gt;radio&lt;</a>
+            </div>
+
+            <div class="link">
+                <a href="https://soundcloud.com/regular-user" target="_blank">
+                &gt;archive&lt;</a>
+            </div>
+
+            <div class="link" >
+                <a href="https://www.facebook.com/mlmantenn/" target="_blank">
+                &gt;facebook&lt;</a>
+            </div>
+
+            <div class="link">
+                <a href="mailto:info@malmoantenn.se" target="_blank">&gt;contact&lt;</a>
+            </div>
+
+            <p style="text-align: center;">&gt;up next&lt;</p>
+            <a href="http://mixlr.com/malmoantenn/events/ma1-pizza-night" target="_blank">
+                <img  class="mix-image"src="/assets/Pizza_Party.png">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="col-sm-8">
+
+            <div class="navbar" ng-controller="MainCtrl">
+                <a ng-click="newPost()" ng-hide="isActive('/newpost')">
+                    <button class="nav-button"><i class="fa fa-plus"></i></button>
+                </a>
+                <a ng-click="run()" href="#/" ng-hide="isActive('/')">
+                    <button class="nav-button"><i class="fa fa-align-left"></i></button>
+                </a>
+            </div>
+            <div ui-view></div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+<!--Vendors -->
+
+<!--(if target dist)><!-->
+<script type="text/javascript" src="bundle.js"></script>
+<!--<!(endif)-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
+
+
+<!-- My app -->
+<!--(if target dev)><!-->
+
+
+<!--<!(endif)-->
+
+</html>
