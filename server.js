@@ -20,7 +20,7 @@ var postSchema = new Schema({
     title : String,
     description : String,
     date: {type : Date,
-          default: Date.now
+        default: Date.now
     }
 });
 
@@ -84,7 +84,7 @@ app.post('/uploadfile', function(req, res) {
             saveToDb(fields.myObj);
             res.writeHead(200, "OK", {'Content-Type': 'text/html'});
             res.end();
-         }
+        }
     });
 });
 
@@ -111,5 +111,4 @@ var saveToDb = function(object){
         }
     )
 };
-
 
