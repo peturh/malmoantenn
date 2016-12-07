@@ -119,16 +119,19 @@ app.post('/newInfo', jsonParser, function (req, res) {
     console.log(req.body);
     if (req.body.password === password) {
         saveInfoToDb(req.body, function (success) {
+            console.log(success)
             if (success) {
                 res.end();
             }
             else {
                 res.status(500).send()
+                res.end();
             }
         })
     }
     else {
-        res.status(401);
+        res.status(401).send();
+        res.end();
     }
 });
 
