@@ -13,7 +13,7 @@ var password = "hej";
 var serveStatic = require('serve-static');
 app.use(serveStatic(__dirname + "/dist"));
 
-mongoose.connect("mongodb://localhost:27017/cedricMusic");
+mongoose.connect("mongodb://localhost:27017/antenn");
 
 var postSchema = new Schema({
     fileName: String,

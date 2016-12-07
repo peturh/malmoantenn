@@ -7,7 +7,6 @@ app.controller('PublishCtrl',['$scope','QueryService','$upload', function($scope
         "fileName" : "",
         "title" : "",
         "description" : "",
-        "date" :"",
         "password" : ""
     };
 
