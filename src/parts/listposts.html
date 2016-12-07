@@ -8,9 +8,9 @@
                     <div cg-busy="started"></div>
                     <div wave-surfer src="{{post.fileName}}"></div>
                     <div class="media-buttons">
-                        <button class="media-button" ng-click="playSong()" ng-hide="playing || !started">
-                            <a><i class="fa fa-play"></i></a>
-                        </button>
+                        <a class="media-button" ng-click="playSong()" title="Load song" ng-hide="playing || !started">
+                            <i class="fa fa-play"></i></a>
+                        </a>
 
                         <button class="media-button" ng-click="pauseSong()" ng-hide="!playing || !started">
                             <a><i class="fa fa-pause"></i> </a>
@@ -35,13 +35,10 @@
                             <a><i class="fa fa-volume-off"></i></a>
                         </button>
 
-
-                        <button class="media-button">
-                            <a href="{{post.fileName}}" target="_blank">
-                                <i class="fa fa-download"></i>
-                            </a>
+                        <button class="media-button" ng-click="loadSong(post.fileName)" ng-hide="loaded">
+                                <i class="fa fa-download" ng-hide="loaded || loading"></i>
+                                <i class="fa fa-spinner fa-pulse" ng-show="loading"></i>
                         </button>
-
 
                         <button class="media-button remove" ng-click="showDeletePass=!showDeletePass"
                                 ng-hide="showDeletePass">

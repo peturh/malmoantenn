@@ -22,7 +22,10 @@
     .link{
       text-align: center;
       color:white;
-      font-size:25px;
+      font-size:2vw;
+      @media(max-width:768px){
+        font-size:20px;
+      }
     }
   }
 }
@@ -32,4 +35,20 @@
 }
 a{
   color:unset;
+}
+.edit-text{
+  height:400px;
+  width:100%;
+}
+.info-text{
+  width:100%;
+}
+.edit-info-text{
+  height:32px;
+  width:100%;
+  text-align:center;
+}
+.edit-button{
+  background:#1f1e1c;
+  color:white;
 }

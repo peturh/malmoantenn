@@ -53,8 +53,6 @@ app.controller('PublishCtrl',['$scope','QueryService','$upload', function($scope
     };
 
 
-
-
     $scope.getPercentage = function() {
         if ($scope.progressPercentage === 0) {
             return "Submit";

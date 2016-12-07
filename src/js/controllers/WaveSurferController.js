@@ -8,6 +8,8 @@ app.controller('WaveSurferController', ['$scope', function ($scope) {
 
     $scope.playing = false;
     $scope.started = false;
+    $scope.loaded = false;
+    $scope.loading = false;
 
 
     $scope.start = function(){
@@ -15,6 +17,11 @@ app.controller('WaveSurferController', ['$scope', function ($scope) {
                 $scope.started = true;
             }
         );
+    };
+
+    $scope.loadSong = function(song){
+        $scope.loading = true;
+        $scope.wavesurfer.load(song);
     };
 
     $scope.playSong = function(){

@@ -6,7 +6,24 @@
 </head>
 <body>
 
-<div class="">
+<div ng-controller="PostCtrl" ng-init="run()">
+
+    <span class="remover" ng-hide="showDeletePassInfo">
+        <button class="media-button edit-button" ng-click="showDeletePassInfo=!showDeletePassInfo">
+            <i class="fa fa-pencil"></i>
+        </button>
+    </span>
+    <span class="remover" ng-hide="!showDeletePassInfo">
+        <input ng-model="deletePassInfo" type="password" class="password-delete"
+               placeholder="Password...">
+            <button class="media-button confirm-remove" ng-click="editInfo(deletePassInfo)">
+                Confirm
+            </button>
+        <button class="media-button undo" ng-click="showDeletePassInfo=!showDeletePassInfo"><i
+                class="fa fa-undo"></i>
+        </button>
+    </span>
+
     <div class="header">
         <img class="" alt="Logo" src="/assets/Logo_grey.png" style="width: 130px; height: 130px;"/>
         <img class="hidden-sm hidden-xs img-responsive" alt="Header" src="/assets/Header_transparent.png"
@@ -14,39 +31,32 @@
     </div>
 
     <div class="info">
-        <p>&gt;web radio, broadcasting wednesdays between 7 p.m. and 10 p.m.
-            GMT+1&lt;</p>
+        <p ng-hide="showDeletePassInfo" ng-bind="infoHeader">
+        </p>
+        <textarea class="edit-info-text" ng-model="infoHeader" ng-hide="!showDeletePassInfo"></textarea>
+
     </div>
     <div class="row menu-row">
         <div class="menu col-sm-2">
-            <div class="link" >
-                <a href="https://mixlr.com/malmoantenn/" target="_blank">&gt;radio&lt;</a>
-            </div>
-
             <div class="link">
-                <a href="https://soundcloud.com/regular-user" target="_blank">
-                &gt;archive&lt;</a>
-            </div>
-
-            <div class="link" >
                 <a href="https://www.facebook.com/mlmantenn/" target="_blank">
-                &gt;facebook&lt;</a>
+                    &gt;facebook&lt;</a>
             </div>
 
             <div class="link">
                 <a href="mailto:info@malmoantenn.se" target="_blank">&gt;contact&lt;</a>
             </div>
-
-            <p style="text-align: center;">&gt;up next&lt;</p>
-            <a href="http://mixlr.com/malmoantenn/events/ma1-pizza-night" target="_blank">
-                <img  class="mix-image"src="/assets/Pizza_Party.png">
-            </a>
-        </div>
+            
+            <iframe src="https://mixlr.com/users/5672861/embed" width="100%" height="180px" scrolling="no" frameborder="no" marginheight="0" marginwidth="0"></iframe><small><a href="http://mixlr.com/malmoantenn" style="color:#1a1a1a;text-align:left; font-family:Helvetica, sans-serif; font-size:11px;">malmoantenn is on Mixlr</a></small>        </div>
         <div class="col-sm-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            <p ng-hide="showDeletePassInfo" ng-bind="infoDescription">
+
+            </p>
+            <textarea class="edit-text" ng-model="infoDescription" ng-hide="!showDeletePassInfo"></textarea>
+
         </div>
         <div class="col-sm-8">
-
             <div class="navbar" ng-controller="MainCtrl">
                 <a ng-click="newPost()" ng-hide="isActive('/newpost')">
                     <button class="nav-button"><i class="fa fa-plus"></i></button>
@@ -62,21 +72,10 @@
 </div>
 </body>
 
-<!--Vendors -->
-
-<!--(if target dist)><!-->
 <script type="text/javascript" src="bundle.js"></script>
-<!--<!(endif)-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
-
-
-<!-- My app -->
-<!--(if target dev)><!-->
-
-
-<!--<!(endif)-->
 
 </html>
