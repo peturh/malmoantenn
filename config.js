@@ -1,6 +1,7 @@
 module.exports = {
     apps : [{
-        name        : "worker",
+        name : "antenn",
+        script      : "./server.js",
         env: {
             "PASWORD": "hej"
         }
