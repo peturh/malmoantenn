@@ -9,7 +9,7 @@ var jsonParser = bodyparser.json();
 var Schema = mongoose.Schema;
 var dir = "src";
 var uploadDir = "./" + dir + "/music";
-var password = process.env.password || "hej";
+var password = process.env.PASSWORD || "hej";
 var serveStatic = require('serve-static');
 app.use(serveStatic(__dirname + "/dist"));
 
