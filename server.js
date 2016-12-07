@@ -29,7 +29,8 @@ var postModel = mongoose.model('post', postSchema);
 
 var textSchema = new Schema({
     infoDescription: String,
-    infoHeader: String
+    infoHeader: String,
+    pictureUrl : String
 });
 
 var textModel = mongoose.model('text', textSchema);

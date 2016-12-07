@@ -18,6 +18,7 @@ app.controller('PostCtrl', ['$scope', 'QueryService', '$timeout', function ($sco
         QueryService.getInfo().then(function (response) {
             $scope.infoHeader = response.data.infoHeader;
             $scope.infoDescription = response.data.infoDescription;
+            $scope.pictureUrl = response.data.pictureUrl;
         });
 
         QueryService.getMixes().then(function (response) {
@@ -50,7 +51,8 @@ app.controller('PostCtrl', ['$scope', 'QueryService', '$timeout', function ($sco
         var theRequest = {
             "password": password,
             "infoHeader": $scope.infoHeader,
-            "infoDescription": $scope.infoDescription
+            "infoDescription": $scope.infoDescription,
+            "pictureUrl" : $scope.pictureUrl
         };
 
         QueryService.publishNewInfo(theRequest).then(function (data) {
