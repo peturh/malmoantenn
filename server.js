@@ -148,7 +148,8 @@ var saveInfoToDb = function (object, callback) {
     console.log("Saving post to database...");
     var newObject = {
         infoHeader: object.infoHeader,
-        infoDescription: object.infoDescription
+        infoDescription: object.infoDescription,
+        pictureUrl : object.pictureUrl
     };
     var newPost = new textModel(newObject);
     console.log(newPost);
