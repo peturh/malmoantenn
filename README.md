@@ -12,6 +12,7 @@ The source code for the malmö radio program malmö antenn. It's sloppy, but wor
 Install node however you want.
 
 `npm install`
+
 `sudo npm install webpack -g`
 
 ## Develop
@@ -19,6 +20,7 @@ Install node however you want.
 Run 
 
 `nodejs server.js`
+
 `nodejs webpack-server.js`
 
 ## Production
@@ -26,5 +28,7 @@ Run
 Run 
 
 `webpack`
+
 a `dist/` folder is created.
+
 `nodejs server.js`
