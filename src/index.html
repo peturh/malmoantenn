@@ -1,5 +1,8 @@
 <html ng-app="soundMixes">
 <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -56,15 +59,15 @@
 
             <iframe src="https://mixlr.com/users/5672861/embed" width="100%" height="180px" scrolling="no" frameborder="no" marginheight="0" marginwidth="0"></iframe></div>
 
-            <div class="col-sm-2">
+            <div class="col-sm-4">
 
-            <p style="font-weight: 100;" ng-hide="showDeletePassInfo" ng-bind="infoDescription">
+            <pre style="font-weight: 100;" ng-hide="showDeletePassInfo" ng-bind="infoDescription">
 
-            </p>
+            </pre>
             <textarea class="edit-text" ng-model="infoDescription" ng-hide="!showDeletePassInfo"></textarea>
 
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
             <div class="navbar" ng-controller="MainCtrl">
                 <a ng-click="newPost()" ng-hide="isActive('/newpost')">
                     <button class="nav-button"><i class="fa fa-plus"></i></button>
