@@ -1,15 +1,35 @@
 @yellow : #ffeb14;
 .header{
+  @media(min-width: 768px){
+    height:19vh;
+  }
   background:#1f1e1c;
   img{
+    height:130px;
     display:inline;
+    @media(min-width: 768px){
+      height:100%;
+
+    }
+  }
+}
+.full-height{
+  @media(min-width: 768px){
+    height:77vh;
+    overflow:auto;
   }
 }
 .info{
   font-size:23px;
+  @media(min-width: 768px){
+    height:4vh;
+  }
   background-color: @yellow;
   p{
     margin:0;
+    @media(min-width: 768px){
+      height:100%;
+    }
     text-align: center;
   }
 }
@@ -18,7 +38,7 @@
   margin:0;
   .menu{
     background:#ffeb14;
-    padding:20px;
+    padding:0 20px 20px;
     .link{
       text-align: center;
       color:black;

@@ -27,9 +27,8 @@
     </span>
 
     <div class="header">
-        <img class="" alt="Logo" src="/assets/Logo_grey.png" style="width: 130px; height: 130px;"/>
-        <img class="hidden-sm hidden-xs img-responsive" alt="Header" src="/assets/Header_transparent.png"
-             style="width: auto; height: 130px;"/>
+        <img class="img-responsive" alt="Logo" src="/assets/Logo_grey.png"/>
+        <img class="img-responsive hidden-xs hidden-md hidden-sm" alt="Header" src="/assets/Header_transparent.png"/>
     </div>
 
     <div class="info">
@@ -39,7 +38,7 @@
 
     </div>
     <div class="row menu-row">
-        <div class="menu col-sm-2">
+        <div class="menu col-sm-2 full-height">
             <div class="link">
                 <a href="https://www.facebook.com/mlmantenn/" target="_blank">
                     &gt;facebook&lt;</a>
@@ -59,7 +58,7 @@
 
             <iframe src="https://mixlr.com/users/5672861/embed" width="100%" height="180px" scrolling="no" frameborder="no" marginheight="0" marginwidth="0"></iframe></div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 full-height">
 
             <div class="info-text-area-div" style="font-weight: 100;" ng-hide="showDeletePassInfo" ng-bind="infoDescription">
 
@@ -67,7 +66,7 @@
             <textarea class="edit-text" ng-model="infoDescription" ng-hide="!showDeletePassInfo"></textarea>
 
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 full-height">
             <div class="navbar" ng-controller="MainCtrl">
                 <a ng-click="newPost()" ng-hide="isActive('/newpost')">
                     <button class="nav-button"><i class="fa fa-plus"></i></button>
